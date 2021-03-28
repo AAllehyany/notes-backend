@@ -14,3 +14,21 @@ class Admin(AdminBase):
 
     class Config:
         orm_mode=True
+
+
+class ClientBase(BaseModel):
+    email: str
+    first_name: str
+    last_name: str
+    phone: str
+
+
+class ClientCreate(ClientBase):
+    pass
+
+class Client(ClientBase):
+    id: int
+
+    class Config:
+        orm_mode=True
+
